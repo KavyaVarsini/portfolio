@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-dark: #050816;
+  --color-surface: #0F172A;
+  --color-card: #111827;
+  --color-accent: #8B5CF6;
+  --color-secondary: #7C3AED;
+  --color-highlight: #6366F1;
+  --color-text-main: #F8FAFC;
+  --color-muted: #94A3B8;
+  --color-border-custom: rgba(255, 255, 255, 0.08);
+
+  --font-sora: "Sora", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-inter);
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-main);
+  }
+
+  body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-main);
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050816;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.4);
+}
+
+/* Noise overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  opacity: 0.025;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Premium Grid Background */
+.grid-bg {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(15, 23, 42, 0.75);
+  border-color: rgba(139, 92, 246, 0.35);
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Premium Card Gradient Border Hover */
+.premium-border-card {
+  position: relative;
+  background: #111827;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.premium-border-card::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  border-radius: 12px;
+  z-index: -1;
+  transition: opacity 0.5s ease;
+}
+
+.premium-border-card:hover::before {
+  background: linear-gradient(135deg, #8B5CF6, #6366F1, #7C3AED);
+}
+
+/* Floating Blur Glow Blobs */
+.blur-blob {
+  position: absolute;
+  filter: blur(120px);
+  opacity: 0.12;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Speaking pulse concentric circles */
+@keyframes speak-ripple {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.speak-pulse-ring {
+  position: absolute;
+  border: 1.5px solid rgba(139, 92, 246, 0.35);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.pulse-ring-1 {
+  animation: speak-ripple 2.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.pulse-ring-2 {
+  animation: speak-ripple 2.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  animation-delay: 0.8s;
+}
+
+.pulse-ring-3 {
+  animation: speak-ripple 2.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  animation-delay: 1.6s;
+}
+
+/* Custom CSS components */
+.section-heading-gradient {
+  background: linear-gradient(135deg, #F8FAFC 30%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
