@@ -91,7 +91,6 @@
 /* Premium Card Gradient Border Hover */
 .premium-border-card {
   position: relative;
-  background: #111827;
   border-radius: 12px;
   z-index: 1;
 }
@@ -105,12 +104,24 @@
   bottom: -1px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
   border-radius: 12px;
-  z-index: -1;
+  z-index: -2;
   transition: opacity 0.5s ease;
 }
 
 .premium-border-card:hover::before {
   background: linear-gradient(135deg, #8B5CF6, #6366F1, #7C3AED);
+}
+
+.premium-border-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #111827;
+  border-radius: 12px;
+  z-index: -1;
 }
 
 /* Floating Blur Glow Blobs */
