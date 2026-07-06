@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowDown, Github, Linkedin, FileText } from "lucide-react";
+import { ArrowDown, Github, Linkedin, FileText, Mail } from "lucide-react";
 
 const roles = ["Full Stack Developer", "AI Enthusiast"];
 
@@ -113,8 +113,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-2xl text-muted text-base sm:text-lg md:text-xl font-normal leading-relaxed mb-10 px-4"
         >
-          Final-year Computer Science & Data Analytics student specializing in MERN stack,
-          Flask microservices, and AI-native architectures.
+          Final-year Computer Science & Data Analytics student building full-stack applications using React, Node.js, MongoDB and Flask.
         </motion.p>
 
         {/* Action Buttons (CTAs) */}
@@ -130,6 +129,13 @@ export default function Hero() {
             className="px-6 py-3 rounded-full font-semibold text-sm bg-white text-bg-dark hover:bg-neutral-200 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.1)] cursor-pointer"
           >
             Get In Touch
+          </a>
+          <a
+            href="mailto:kavyasenthil505@gmail.com"
+            className="flex items-center gap-2 px-5 py-3 rounded-full font-semibold text-sm text-white bg-white/[0.03] border border-white/[0.08] hover:bg-white/[0.08] hover:border-white/[0.15] transition-all cursor-pointer"
+          >
+            <Mail size={16} className="text-muted" />
+            Email
           </a>
           <a
             href="https://github.com/KavyaVarsini"
