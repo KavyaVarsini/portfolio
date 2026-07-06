@@ -93,6 +93,12 @@
   position: relative;
   border-radius: 12px;
   z-index: 1;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-border-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.12);
 }
 
 .premium-border-card::before {
