@@ -19,14 +19,7 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Dynamic design system details */}
-        <div className="hidden lg:flex items-center gap-6 font-mono text-[10px] text-muted/60 uppercase">
-          <span>Dark Mode Active</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-accent/60" />
-          <span>Tailwind v4</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-accent/60" />
-          <span>Framer Motion Ready</span>
-        </div>
+
 
         {/* Scroll To Top */}
         <button
