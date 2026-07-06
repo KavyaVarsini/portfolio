@@ -104,88 +104,90 @@ export default function Projects() {
             <motion.div
               key={idx}
               variants={cardVariants}
-              className="premium-border-card flex flex-col h-full"
+              className="h-full"
             >
-              {/* Card Inner Padding */}
-              <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
-                
-                <div>
-                  {/* Category Type & Icon */}
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-[10px] font-mono text-accent bg-accent/10 border border-accent/20 px-2 py-0.5 rounded-full uppercase tracking-wider font-semibold">
-                      {project.type}
-                    </span>
-                    <div className="w-8 h-8 rounded-full bg-white/[0.03] border border-white/[0.08] flex items-center justify-center">
-                      {project.badgeIcon}
+              <div className="premium-border-card flex flex-col h-full">
+                {/* Card Inner Padding */}
+                <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                  
+                  <div>
+                    {/* Category Type & Icon */}
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-[10px] font-mono text-accent bg-accent/10 border border-accent/20 px-2 py-0.5 rounded-full uppercase tracking-wider font-semibold">
+                        {project.type}
+                      </span>
+                      <div className="w-8 h-8 rounded-full bg-white/[0.03] border border-white/[0.08] flex items-center justify-center">
+                        {project.badgeIcon}
+                      </div>
+                    </div>
+
+                    {/* Title & Tagline */}
+                    <h3 className="font-sora text-xl font-bold text-white mb-1">
+                      {project.title}
+                    </h3>
+                    <p className="text-xs text-muted font-medium font-mono mb-4">
+                      {project.tagline}
+                    </p>
+
+                    {/* Description */}
+                    <p className="text-sm text-muted mb-6 leading-relaxed">
+                      {project.description}
+                    </p>
+
+                    {/* Features Bullet List */}
+                    <div className="mb-6 space-y-2">
+                      <h4 className="text-xs font-mono text-white/80 uppercase tracking-widest mb-3">Key Features</h4>
+                      {project.features.map((feat, fIdx) => (
+                        <div key={fIdx} className="flex items-start gap-2.5 text-xs text-muted">
+                          <CheckCircle2 size={13} className="text-accent mt-0.5 shrink-0" />
+                          <span>{feat}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
-                  {/* Title & Tagline */}
-                  <h3 className="font-sora text-xl font-bold text-white mb-1">
-                    {project.title}
-                  </h3>
-                  <p className="text-xs text-muted font-medium font-mono mb-4">
-                    {project.tagline}
-                  </p>
+                  {/* Tech Chips & Action buttons */}
+                  <div>
+                    {/* Tech stack chips */}
+                    <div className="flex flex-wrap gap-1.5 mb-6 pt-4 border-t border-white/[0.04]">
+                      {project.stack.map((tech, tIdx) => (
+                        <span
+                          key={tIdx}
+                          className="text-[10px] font-mono text-white/60 bg-white/[0.02] border border-white/[0.05] px-2 py-0.5 rounded"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
 
-                  {/* Description */}
-                  <p className="text-sm text-muted mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  {/* Features Bullet List */}
-                  <div className="mb-6 space-y-2">
-                    <h4 className="text-xs font-mono text-white/80 uppercase tracking-widest mb-3">Key Features</h4>
-                    {project.features.map((feat, fIdx) => (
-                      <div key={fIdx} className="flex items-start gap-2.5 text-xs text-muted">
-                        <CheckCircle2 size={13} className="text-accent mt-0.5 shrink-0" />
-                        <span>{feat}</span>
-                      </div>
-                    ))}
+                    {/* Links */}
+                    <div className="flex items-center gap-4">
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex items-center gap-1.5 text-xs font-semibold text-white/80 hover:text-white transition-colors"
+                        >
+                          <Github size={14} />
+                          Repository
+                        </a>
+                      )}
+                      {project.live && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex items-center gap-1.5 text-xs font-semibold text-accent hover:text-white transition-colors"
+                        >
+                          <ExternalLink size={14} />
+                          Live Demo
+                        </a>
+                      )}
+                    </div>
                   </div>
+
                 </div>
-
-                {/* Tech Chips & Action buttons */}
-                <div>
-                  {/* Tech stack chips */}
-                  <div className="flex flex-wrap gap-1.5 mb-6 pt-4 border-t border-white/[0.04]">
-                    {project.stack.map((tech, tIdx) => (
-                      <span
-                        key={tIdx}
-                        className="text-[10px] font-mono text-white/60 bg-white/[0.02] border border-white/[0.05] px-2 py-0.5 rounded"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex items-center gap-4">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex items-center gap-1.5 text-xs font-semibold text-white/80 hover:text-white transition-colors"
-                      >
-                        <Github size={14} />
-                        Repository
-                      </a>
-                    )}
-                    {project.live && (
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex items-center gap-1.5 text-xs font-semibold text-accent hover:text-white transition-colors"
-                      >
-                        <ExternalLink size={14} />
-                        Live Demo
-                      </a>
-                    )}
-                  </div>
-                </div>
-
               </div>
             </motion.div>
           ))}

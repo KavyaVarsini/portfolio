@@ -105,68 +105,69 @@ export default function Certifications() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="group premium-border-card p-6 md:p-8 flex flex-col justify-between"
+              className="w-full"
             >
-              <div>
-                {/* Header: Issuer and Date */}
-                <div className="flex items-center justify-between mb-4">
-                  <span className={`text-[10px] font-mono border px-2.5 py-0.5 rounded-full uppercase tracking-wider font-semibold ${cert.badgeColor}`}>
-                    {cert.issuer}
-                  </span>
-                  <span className="text-xs font-mono text-muted flex items-center gap-1">
-                    <Calendar size={12} />
-                    {cert.date}
-                  </span>
-                </div>
+              <div className="group premium-border-card p-6 md:p-8 flex flex-col justify-between h-full">
+                <div>
+                  {/* Header: Issuer and Date */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className={`text-[10px] font-mono border px-2.5 py-0.5 rounded-full uppercase tracking-wider font-semibold ${cert.badgeColor}`}>
+                      {cert.issuer}
+                    </span>
+                    <span className="text-xs font-mono text-muted flex items-center gap-1">
+                      <Calendar size={12} />
+                      {cert.date}
+                    </span>
+                  </div>
 
-                {/* Title */}
-                <h3 className="font-sora text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors flex items-start gap-2">
-                  <Award size={20} className="text-accent shrink-0 mt-1" />
-                  {cert.title}
-                </h3>
+                  {/* Title */}
+                  <h3 className="font-sora text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors flex items-start gap-2">
+                    <Award size={20} className="text-accent shrink-0 mt-1" />
+                    {cert.title}
+                  </h3>
 
-                {/* Credential ID */}
-                {cert.credentialId && (
-                  <p className="text-[10px] font-mono text-muted mb-6 flex items-center gap-1.5 font-semibold">
-                    <ShieldCheck size={12} className="text-emerald-400" />
-                    License: {cert.credentialId}
-                  </p>
-                )}
+                  {/* Credential ID */}
+                  {cert.credentialId && (
+                    <p className="text-[10px] font-mono text-muted mb-6 flex items-center gap-1.5 font-semibold">
+                      <ShieldCheck size={12} className="text-emerald-400" />
+                      License: {cert.credentialId}
+                    </p>
+                  )}
 
-                {/* Skills Acquired */}
-                <div className="space-y-2">
-                  <h4 className="text-[10px] font-mono text-white/70 uppercase tracking-widest font-bold">Skills Practiced</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {cert.skillsAcquired.map((skill, sIdx) => (
-                      <span
-                        key={sIdx}
-                        className="text-[10px] font-mono bg-white/[0.02] border border-white/[0.05] text-white/70 px-2 py-1 rounded"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+                  {/* Skills Acquired */}
+                  <div className="space-y-2">
+                    <h4 className="text-[10px] font-mono text-white/70 uppercase tracking-widest font-bold">Skills Practiced</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {cert.skillsAcquired.map((skill, sIdx) => (
+                        <span
+                          key={sIdx}
+                          className="text-[10px] font-mono bg-white/[0.02] border border-white/[0.05] text-white/70 px-2 py-1 rounded"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Action buttons/footer */}
-              <div className="mt-8 pt-4 border-t border-white/[0.04] flex items-center justify-between">
-                <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full font-bold">
-                  Credential Verified
-                </span>
-                {cert.pdfUrl && (
-                  <a 
-                    href={cert.pdfUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-xs text-muted hover:text-white transition-colors flex items-center gap-1 cursor-pointer"
-                  >
-                    Verify Link
-                    <ExternalLink size={12} />
-                  </a>
-                )}
+                {/* Action buttons/footer */}
+                <div className="mt-8 pt-4 border-t border-white/[0.04] flex items-center justify-between">
+                  <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full font-bold">
+                    Credential Verified
+                  </span>
+                  {cert.pdfUrl && (
+                    <a 
+                      href={cert.pdfUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-xs text-muted hover:text-white transition-colors flex items-center gap-1 cursor-pointer"
+                    >
+                      Verify Link
+                      <ExternalLink size={12} />
+                    </a>
+                  )}
+                </div>
               </div>
-
             </motion.div>
           ))}
         </div>

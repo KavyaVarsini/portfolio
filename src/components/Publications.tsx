@@ -66,35 +66,37 @@ export default function Publications() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="group glass-panel glass-panel-hover p-6 md:p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-start"
+              className="w-full"
             >
-              {/* Category Icon */}
-              <div className="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center group-hover:bg-accent/10 transition-colors shrink-0">
-                {pub.icon}
-              </div>
-
-              {/* Contents */}
-              <div className="flex-1 space-y-3">
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-[10px] font-mono text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded-full uppercase tracking-wider font-semibold">
-                    {pub.category}
-                  </span>
-                  <span className="text-xs font-mono text-muted flex items-center gap-1.5 font-semibold">
-                    <Calendar size={12} />
-                    {pub.year}
-                  </span>
+              <div className="group glass-panel glass-panel-hover p-6 md:p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-start w-full">
+                {/* Category Icon */}
+                <div className="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center group-hover:bg-accent/10 transition-colors shrink-0">
+                  {pub.icon}
                 </div>
 
-                <h3 className="font-sora text-xl font-bold text-white group-hover:text-accent transition-colors">
-                  {pub.title}
-                </h3>
-                <p className="text-xs font-semibold text-white/70 font-mono flex items-center gap-1">
-                  <Award size={12} className="text-muted" />
-                  {pub.details}
-                </p>
-                <p className="text-sm text-muted leading-relaxed pt-2">
-                  {pub.description}
-                </p>
+                {/* Contents */}
+                <div className="flex-1 space-y-3">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <span className="text-[10px] font-mono text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded-full uppercase tracking-wider font-semibold">
+                      {pub.category}
+                    </span>
+                    <span className="text-xs font-mono text-muted flex items-center gap-1.5 font-semibold">
+                      <Calendar size={12} />
+                      {pub.year}
+                    </span>
+                  </div>
+
+                  <h3 className="font-sora text-xl font-bold text-white group-hover:text-accent transition-colors">
+                    {pub.title}
+                  </h3>
+                  <p className="text-xs font-semibold text-white/70 font-mono flex items-center gap-1">
+                    <Award size={12} className="text-muted" />
+                    {pub.details}
+                  </p>
+                  <p className="text-sm text-muted leading-relaxed pt-2">
+                    {pub.description}
+                  </p>
+                </div>
               </div>
             </motion.div>
           ))}

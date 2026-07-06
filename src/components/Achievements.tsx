@@ -110,35 +110,37 @@ export default function Achievements() {
             <motion.div
               key={idx}
               variants={cardVariants}
-              className="group glass-panel glass-panel-hover p-6 rounded-2xl relative flex flex-col justify-between"
+              className="h-full"
             >
-              <div>
-                {/* Icon Header */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className={`w-9 h-9 rounded-xl border flex items-center justify-center ${ach.color}`}>
-                    {ach.icon}
+              <div className="group glass-panel glass-panel-hover p-6 rounded-2xl relative flex flex-col justify-between h-full">
+                <div>
+                  {/* Icon Header */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className={`w-9 h-9 rounded-xl border flex items-center justify-center ${ach.color}`}>
+                      {ach.icon}
+                    </div>
+                    {ach.metric && (
+                      <span className="text-xs font-mono text-white/80 bg-white/[0.03] border border-white/[0.08] px-2.5 py-0.5 rounded-full font-bold">
+                        {ach.metric}
+                      </span>
+                    )}
                   </div>
-                  {ach.metric && (
-                    <span className="text-xs font-mono text-white/80 bg-white/[0.03] border border-white/[0.08] px-2.5 py-0.5 rounded-full font-bold">
-                      {ach.metric}
-                    </span>
-                  )}
+
+                  {/* Info */}
+                  <span className="text-[9px] font-mono text-muted uppercase tracking-widest font-bold">
+                    {ach.category}
+                  </span>
+                  <h3 className="font-sora text-base font-bold text-white mt-1 group-hover:text-accent transition-colors leading-snug">
+                    {ach.title}
+                  </h3>
+                  <p className="text-xs text-muted mt-3 leading-relaxed">
+                    {ach.description}
+                  </p>
                 </div>
 
-                {/* Info */}
-                <span className="text-[9px] font-mono text-muted uppercase tracking-widest font-bold">
-                  {ach.category}
-                </span>
-                <h3 className="font-sora text-base font-bold text-white mt-1 group-hover:text-accent transition-colors leading-snug">
-                  {ach.title}
-                </h3>
-                <p className="text-xs text-muted mt-3 leading-relaxed">
-                  {ach.description}
-                </p>
+                {/* Decorative line */}
+                <div className="w-full h-[1px] bg-white/[0.04] mt-6 group-hover:bg-accent/20 transition-colors" />
               </div>
-
-              {/* Decorative line */}
-              <div className="w-full h-[1px] bg-white/[0.04] mt-6 group-hover:bg-accent/20 transition-colors" />
             </motion.div>
           ))}
         </motion.div>
