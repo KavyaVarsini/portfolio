@@ -21,14 +21,14 @@ const educationTimeline: TimelineItem[] = [
   {
     year: "Graduated 2024",
     degree: "Higher Secondary Certificate (HSC)",
-    institution: "State Board",
+    institution: "MS.Vidyalaya Matriculation Higher Secondary School",
     score: "96%",
     description: "Focus on Mathematics, Computer Science, and Physics. Developed primary logic concepts and problem-solving skills.",
   },
   {
     year: "Graduated 2022",
     degree: "Secondary School Leaving Certificate (SSLC)",
-    institution: "State Board",
+    institution: "MS.Vidyalaya Matriculation Higher Secondary School",
     score: "93%",
     description: "Acquired foundation skills in general science, mathematics, and primary programming basics.",
   },

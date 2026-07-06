@@ -14,7 +14,7 @@ const achievements: Achievement[] = [
   {
     title: "Highest Academic Performer",
     category: "Academic Excellence",
-    metric: "90.2% CGPA",
+    metric: "9.0 CGPA",
     description: "Ranked as one of the top academic students throughout the B.Sc Computer Science with Data Analytics program at KPR College.",
     icon: <Trophy size={18} />,
     color: "text-amber-400 bg-amber-500/10 border-amber-500/20",

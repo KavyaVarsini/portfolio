@@ -42,6 +42,7 @@ const projects: Project[] = [
     stack: ["Bootstrap", "JavaScript", "HTML5", "CSS3", "Responsive UI"],
     features: ["Elastic Real-Time Search UI", "Interactive Client Cart Module", "Cross-Browser Compatible Layout", "SEO Compliant Semantic Structure"],
     github: "https://github.com/KavyaVarsini/femmora-frontend",
+    live: "https://femmora-frontend.vercel.app/",
     badgeIcon: <Layout className="text-emerald-400" size={18} />,
   },
 ];
