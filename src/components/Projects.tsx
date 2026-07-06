@@ -104,7 +104,7 @@ export default function Projects() {
             <motion.div
               key={idx}
               variants={cardVariants}
-              className="premium-border-card flex flex-col h-full overflow-hidden"
+              className="premium-border-card flex flex-col h-full"
             >
               {/* Card Inner Padding */}
               <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
