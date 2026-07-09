@@ -208,7 +208,7 @@ export default function Contact() {
                   value={formState.message}
                   onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                   className="w-full bg-[#050816]/50 border border-white/[0.08] focus:border-accent rounded-xl px-4 py-3 text-sm text-white focus:outline-none transition-all placeholder:text-muted/40 resize-none"
-                  placeholder="Hey, let's talk about the software engineering project..."
+                  placeholder="Hey, let's talk about the software development project..."
                 />
               </div>
 

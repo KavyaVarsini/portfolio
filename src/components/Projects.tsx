@@ -78,7 +78,7 @@ export default function Projects() {
             transition={{ duration: 0.6 }}
             className="text-xs font-mono text-accent uppercase tracking-widest mb-3"
           >
-            Engineering Portfolio
+            Developer Portfolio
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 15 }}

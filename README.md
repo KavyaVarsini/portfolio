@@ -1,6 +1,6 @@
 # Personal Portfolio | Kavya Varsini S
 
-Welcome to the repository of my personal engineering portfolio. This website is a premium, modern showcase of my projects, skills, certifications, and research contributions as a **Full Stack Developer** and **AI Enthusiast**.
+Welcome to the repository of my personal computer science portfolio. This website is a premium, modern showcase of my projects, skills, certifications, and research contributions as a **Full Stack Developer** and **AI Enthusiast**.
 
 The design system features a dark luxury layout inspired by Vercel, Stripe, and Linear. It utilizes glassmorphism, soft glows, and clean grid spacing, avoiding flashy animations and colorful gradients to maintain a premium developer aesthetic.
 

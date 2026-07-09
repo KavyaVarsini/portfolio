@@ -76,7 +76,7 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-sora text-3xl md:text-5xl font-bold tracking-tight text-white mb-4"
           >
-            Engineering & Analytics
+            Computer Science & Analytics
           </motion.h2>
           <div className="w-12 h-1 bg-accent rounded" />
         </div>
@@ -98,13 +98,13 @@ export default function About() {
           <motion.div variants={itemVariants} className="lg:col-span-6 space-y-6">
             <h3 className="font-sora text-2xl font-semibold text-white">Professional Biography</h3>
             <p className="text-muted leading-relaxed text-base">
-              I am a final-year Computer Science & Data Analytics student with practical, hands-on experience in building scalable full-stack web applications. My training leverages the intersection of computer engineering practices and data-driven insights.
+              I am a final-year Computer Science & Data Analytics student with practical, hands-on experience in building scalable full-stack web applications. My training leverages the intersection of computer science principles and data-driven insights.
             </p>
             <p className="text-muted leading-relaxed text-base">
-              My engineering stack centers around JavaScript (MERN: MongoDB, Express, React, Node.js), Python (Flask), and modern cloud/database systems. I approach development through a lens of clean architecture, modularity, and high performance.
+              My development stack centers around JavaScript (MERN: MongoDB, Express, React, Node.js), Python (Flask), and modern cloud/database systems. I approach development through a lens of clean architecture, modularity, and high performance.
             </p>
             <p className="text-muted leading-relaxed text-base">
-              Deeply curious about AI-native systems, API engineering, and scalable enterprise designs, I enjoy building tools that solve real-world problems. I'm actively seeking opportunities to contribute as a Full Stack Developer or Software Engineering intern.
+              Deeply curious about AI-native systems, API development, and scalable enterprise designs, I enjoy building tools that solve real-world problems. I'm actively seeking opportunities to contribute as a Full Stack Developer or Software Development intern.
             </p>
 
             {/* Quick Metrics */}
