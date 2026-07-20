@@ -32,6 +32,7 @@ const projects: Project[] = [
     description: "A robust enterprise tool tailored for industrial power looms. Optimizes scheduling metrics, tracks worker shift logs, aggregates analytics, and monitors manufacturing production outputs.",
     stack: ["Flask (Python)", "SQLite", "Job Scheduling", "Analytics Dashboard", "Worker Tracking", "Production Logging"],
     features: ["Real-time Shift & Loom Monitoring", "Automated Worker Scheduling Engine", "Interactive Analytics & CSV Exports", "Production Log Database Audit"],
+    github: "https://github.com/KavyaVarsini/powerloom_salary_management",
     badgeIcon: <Cpu className="text-highlight" size={18} />,
   },
   {
